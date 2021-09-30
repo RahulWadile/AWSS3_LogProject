@@ -1,0 +1,13 @@
+H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain.Services\bin\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.Services.deps.json
+H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain.Services\bin\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.Services.dll
+H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain.Services\bin\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.Services.pdb
+H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain.Services\bin\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.dll
+H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain.Services\bin\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.pdb
+H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain.Services\obj\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.Services.AssemblyInfoInputs.cache
+H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain.Services\obj\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.Services.AssemblyInfo.cs
+H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain.Services\obj\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.Services.csproj.CoreCompileInputs.cache
+H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain.Services\obj\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.Services.csproj.CopyComplete
+H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain.Services\obj\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.Services.dll
+H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain.Services\obj\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.Services.pdb
+H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain.Services\obj\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.Services.csproj.AssemblyReference.cache
+H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain.Services\obj\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.Services.GeneratedMSBuildEditorConfig.editorconfig

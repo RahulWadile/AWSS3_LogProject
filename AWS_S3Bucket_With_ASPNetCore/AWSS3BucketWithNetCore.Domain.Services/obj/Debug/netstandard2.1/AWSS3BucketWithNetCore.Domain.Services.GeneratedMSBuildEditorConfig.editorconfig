@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = AWSS3BucketWithNetCore.Domain.Services
+build_property.ProjectDir = H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain.Services\

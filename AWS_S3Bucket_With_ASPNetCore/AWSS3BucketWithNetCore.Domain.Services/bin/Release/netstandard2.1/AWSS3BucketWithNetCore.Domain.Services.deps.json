@@ -1,0 +1,37 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "AWSS3BucketWithNetCore.Domain.Services/1.0.0": {
+        "dependencies": {
+          "AWSS3BucketWithNetCore.Domain": "1.0.0"
+        },
+        "runtime": {
+          "AWSS3BucketWithNetCore.Domain.Services.dll": {}
+        }
+      },
+      "AWSS3BucketWithNetCore.Domain/1.0.0": {
+        "runtime": {
+          "AWSS3BucketWithNetCore.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AWSS3BucketWithNetCore.Domain.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AWSS3BucketWithNetCore.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

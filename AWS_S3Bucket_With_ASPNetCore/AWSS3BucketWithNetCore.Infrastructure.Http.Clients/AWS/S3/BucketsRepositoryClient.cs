@@ -46,11 +46,13 @@ namespace AWSS3BucketWithNetCore.Infrastructure.Http.Clients.AWS.S3
             }
         }
 
+        // Get all file collection from s3 bucket
         public async Task<ListVersionsResponse> GetFilesListAsync()
         {
             return await _clientAmazonS3.ListVersionsAsync(_settings.configuration.BucketName);
         }
 
+        // Get file as per file name form s3 bucket
         public async Task<Stream> GetFileAsync(string key)
         {
             try
@@ -63,13 +65,11 @@ namespace AWSS3BucketWithNetCore.Infrastructure.Http.Clients.AWS.S3
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
 
-
-
+        // Delete file as per filename from s3 bucket
         public async Task<bool> DeleteFileAsync(string key)
         {
             try
@@ -86,6 +86,7 @@ namespace AWSS3BucketWithNetCore.Infrastructure.Http.Clients.AWS.S3
             }
         }
 
+        // Check file already exist or not from s3 bucket
         public async Task<bool> GetFileExist(string key)
         {
             try
@@ -101,48 +102,40 @@ namespace AWSS3BucketWithNetCore.Infrastructure.Http.Clients.AWS.S3
                 return false;
             }
         }
+
+        // Write log as per day wise basic and store in s3 bucket
         public async Task<bool> UpdateLogFile(string fileName, string logMst)
         {
             try
             {
+                StringBuilder objStringBuilder = null;
+                LogMsg objLog = null;
+                string txtContent = string.Empty;
 
                 GetObjectResponse response = await _clientAmazonS3.GetObjectAsync(_settings.configuration.BucketName, fileName);
                 StreamReader reader = new StreamReader(response.ResponseStream);
 
-                StringBuilder stringBuilder = new StringBuilder();
+                txtContent = reader.ReadToEnd();
+                objStringBuilder = new StringBuilder();
+                objStringBuilder.Append(txtContent);
 
+                //objLog = new LogMsg();
 
-                string content = reader.ReadToEnd();
-
-
-                StringBuilder stringBuild = new StringBuilder();
-                stringBuild.Append(content);
-
-                LogMsg objLog = new LogMsg();
-
-                objLog.LogMessage = logMst;
-                objLog.CreatedDateTime = DateTime.Now.ToString("yyyyMMdd HH:mm:ss");
-
-                //  dese.Add(objLog);
+                objLog = new LogMsg
+                {
+                    LogMessage = logMst,
+                    CreatedDateTime = DateTime.Now.ToString("yyyyMMdd HH:mm:ss")
+                };
 
                 string serializedval = JsonConvert.SerializeObject(objLog);
 
-                stringBuild.Append(serializedval);
-                //List<LogMsg> dese = JsonConvert.DeserializeObject<List<LogMsg>>(content);
+                objStringBuilder.Append(serializedval);
 
-                //LogMsg objLog = new LogMsg();
-
-                //objLog.LogMsgstring = logMst;
-                //objLog.CreatedDateTime = DateTime.Now.ToString("yyyy:MM:dd:HH:mm:ss");
-
-                //dese.Add(objLog);
-
-                //string serializedval = JsonConvert.SerializeObject(dese);
-
-                byte[] byteArray = Encoding.ASCII.GetBytes(Convert.ToString(stringBuild));
-                var seekableStream = new MemoryStream(byteArray);
-                seekableStream.Position = 50;
-
+                byte[] byteArray = Encoding.ASCII.GetBytes(Convert.ToString(objStringBuilder));
+                var seekableStream = new MemoryStream(byteArray)
+                {
+                    Position = 50
+                };
                 return await UploadFileAsync(seekableStream, fileName);
 
             }

@@ -6,5 +6,4 @@ H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Dom
 H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain\obj\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.csproj.CoreCompileInputs.cache
 H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain\obj\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.dll
 H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain\obj\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.pdb
-H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain\obj\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.csproj.AssemblyReference.cache
-H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain\obj\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.GeneratedMSBuildEditorConfig.editorconfig
+H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Domain\obj\Debug\netstandard2.1\AWSS3BucketWithNetCore.Domain.csprojAssemblyReference.cache

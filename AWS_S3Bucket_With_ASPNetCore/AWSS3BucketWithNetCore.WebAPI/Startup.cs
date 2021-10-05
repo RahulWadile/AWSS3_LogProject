@@ -36,9 +36,9 @@ namespace AWSS3BucketWithNetCore.WebAPI
             services.Configure<AWSS3Bucket>(Configuration.GetSection("AWSS3Bucket"));
             services.AddAWSService<IAmazonS3>();
             services.AddScoped<ICatalogService, CatalogService>();
-            services.AddTransient<ICatalogRepository, CatalogRepository>();
-            services.AddTransient<FilesRepositoryClient>();
-            services.AddTransient<BucketsRepositoryClient>();
+            services.AddScoped<ICatalogRepository, CatalogRepository>();
+            services.AddSingleton<FilesRepositoryClient>();
+            services.AddSingleton<BucketsRepositoryClient>();
 
             services.AddSwaggerGen(options =>
             {

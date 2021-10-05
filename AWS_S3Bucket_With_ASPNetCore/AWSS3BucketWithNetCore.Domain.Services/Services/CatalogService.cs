@@ -13,6 +13,8 @@ namespace AWSS3BucketWithNetCore.Domain.Services.Services
     {
         private readonly ICatalogRepository _catalogRepository;
 
+        CatalogResponse catalogResponse = null;
+        List<CatalogResponse> lstCatalogResponses = null;
         public CatalogService(ICatalogRepository catalogRepository)
         {
             _catalogRepository = catalogRepository;
@@ -22,24 +24,23 @@ namespace AWSS3BucketWithNetCore.Domain.Services.Services
         {
             try
             {
-                Catalog objCatalog = new Catalog();
-                objCatalog.Id = addCatalog.Id;
-                objCatalog.Name = addCatalog.Name;
-                objCatalog.CreatedDateTime = System.DateTime.Now;
-                objCatalog.ModifiedDateTime = System.DateTime.Now;
+                Catalog objCatalog = new Catalog { 
+                Id = addCatalog.Id,
+                Name = addCatalog.Name,
+                CreatedDateTime = System.DateTime.Now,
+                ModifiedDateTime = System.DateTime.Now
+            };
 
-                return await _catalogRepository.AddCatalogAsync(objCatalog);
+            return await _catalogRepository.AddCatalogAsync(objCatalog);
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
 
         public async Task<CatalogResponse> GetCatalogByIdAsync(int catalogId)
         {
-            CatalogResponse catalogResponse = null;
 
             try
             {
@@ -68,7 +69,6 @@ namespace AWSS3BucketWithNetCore.Domain.Services.Services
 
         public async Task<IEnumerable<CatalogResponse>> GetAllCatalogAsync()
         {
-            List<CatalogResponse> lstCatalogResponses = null;
 
             try
             {
@@ -104,11 +104,13 @@ namespace AWSS3BucketWithNetCore.Domain.Services.Services
         {
             try
             {
-                Catalog objCatalog = new Catalog();
-                objCatalog.Id = putCatalog.Id;
-                objCatalog.Name = putCatalog.Name;
-                objCatalog.CreatedDateTime = System.DateTime.Now;
-                objCatalog.ModifiedDateTime = System.DateTime.Now;
+                Catalog objCatalog = new Catalog
+                {
+                    Id = putCatalog.Id,
+                    Name = putCatalog.Name,
+                    CreatedDateTime = System.DateTime.Now,
+                    ModifiedDateTime = System.DateTime.Now
+                };
 
                 return await _catalogRepository.UpdateCatalogAsync(objCatalog);
             }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Jq4c45Bac//D6qo/OQHpMUprFp/xnYERsqIE7WJIOrdmTJuipjA1Bltia1Uytr0nG7ZyQvl5b/cMu4rBlKqFCg==",
+  "dgSpecHash": "qZBtf0Cyc8yTwSgnrBBdM9YciEXdlxejSA69DK9tGL02Z7clOozKVlr0YJwx/iQfOlHpRAKmwudfpNA46fmvZw==",
   "success": true,
   "projectFilePath": "H:\\DockerAWS\\ProjectTask\\AWS_S3Bucket_With_ASPNetCore\\AWSS3BucketWithNetCore.Infrastructure.Persistence\\AWSS3BucketWithNetCore.Infrastructure.Persistence.csproj",
   "expectedPackageFiles": [

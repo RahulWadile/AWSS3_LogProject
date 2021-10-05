@@ -25,9 +25,10 @@ namespace AWSS3BucketWithNetCore.Infrastructure.Http.Clients.AWS.S3
             {
                 string fileName = string.Empty;
                 byte[] byteArray = Encoding.ASCII.GetBytes(jsonData);
-                var seekableStream = new MemoryStream(byteArray);
-                seekableStream.Position = 0;
-
+                var seekableStream = new MemoryStream(byteArray)
+                {
+                    Position = 0
+                };
                 fileName = $"{uploadFileName}.json";
                 return await _bucketsRepositoryClient.UploadFileAsync(seekableStream, fileName);
             }
@@ -55,7 +56,7 @@ namespace AWSS3BucketWithNetCore.Infrastructure.Http.Clients.AWS.S3
         {
             try
             {
-                
+
                 Stream fileStream = await _bucketsRepositoryClient.GetFileAsync(key);
                 if (fileStream == null)
                 {
@@ -79,8 +80,10 @@ namespace AWSS3BucketWithNetCore.Infrastructure.Http.Clients.AWS.S3
             {
                 string fileName = string.Empty;
                 byte[] byteArray = Encoding.ASCII.GetBytes(jsonData);
-                var seekableStream = new MemoryStream(byteArray);
-                seekableStream.Position = 0;
+                var seekableStream = new MemoryStream(byteArray)
+                {
+                    Position = 0
+                };
 
                 fileName = $"{uploadFileName}.json";
                 return await _bucketsRepositoryClient.UploadFileAsync(seekableStream, fileName);
@@ -106,30 +109,32 @@ namespace AWSS3BucketWithNetCore.Infrastructure.Http.Clients.AWS.S3
 
         public async Task<bool> WriteLog(string logMsg)
         {
-            string logfileName = DateTime.Today.ToString("ddMMyyyy") + "_logtest.txt";
+            string logfileName = DateTime.Today.ToString("ddMMyyyy") + "_logFile.txt";
             bool isfileExist = await _bucketsRepositoryClient.GetFileExist(logfileName);
             if (!isfileExist)
             {
                 //if file not exist a day. create new file
 
-                LogMsg objLog = new LogMsg();
-
-                objLog.LogMessage = logMsg;
-                objLog.CreatedDateTime = DateTime.Now.ToString("yyyyMMdd HH:mm:ss");
+                LogMsg objLog = new LogMsg
+                {
+                    LogMessage = logMsg,
+                    CreatedDateTime = DateTime.Now.ToString("yyyyMMdd HH:mm:ss")
+                };
 
                 string serializedval = JsonConvert.SerializeObject(objLog);
                 byte[] byteArray = Encoding.ASCII.GetBytes(serializedval);
-                var seekableStream = new MemoryStream(byteArray);
-                seekableStream.Position = 0;
-
+                var seekableStream = new MemoryStream(byteArray)
+                {
+                    Position = 0
+                };
                 return await _bucketsRepositoryClient.UploadFileAsync(seekableStream, logfileName);
 
             }
             else
-            {             
+            {
 
-                return await _bucketsRepositoryClient.UpdateLogFile(logfileName,logMsg);
-               
+                return await _bucketsRepositoryClient.UpdateLogFile(logfileName, logMsg);
+
             }
         }
     }

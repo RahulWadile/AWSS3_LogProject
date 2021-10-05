@@ -20,6 +20,7 @@ namespace AWSS3BucketWithNetCore.WebAPI.Controllers
             _catalogService = catalogService;
         }
 
+        [Route("AddCatalog")]
         [HttpPost]
         public async Task<IActionResult> AddCatalogAsync(AddCatalogRequest catalogRequest)
         {
@@ -40,6 +41,7 @@ namespace AWSS3BucketWithNetCore.WebAPI.Controllers
             }
         }
 
+        [Route("GetAllCatalogList")]
         [HttpGet]
         public async Task<IActionResult> GetAllCatalogAsync()
         {
@@ -58,7 +60,9 @@ namespace AWSS3BucketWithNetCore.WebAPI.Controllers
             }
         }
 
-        [HttpGet("{id:int}")]
+     
+        [Route("GetCatalogById/{id}")]
+        [HttpGet]
         public async Task<IActionResult> GetCatalogByIdAsync(int id)
         {
             try
@@ -78,10 +82,10 @@ namespace AWSS3BucketWithNetCore.WebAPI.Controllers
         }
 
 
-
-
-        [HttpGet("{filename}")]
-        public async Task<IActionResult> GetCatalogByIdAsync(string filename)
+      
+        [Route("GetLogFile/{filename}")]
+        [HttpGet]
+        public async Task<IActionResult> GetLogFileByFileName(string filename)
         {
             try
             {
@@ -99,6 +103,7 @@ namespace AWSS3BucketWithNetCore.WebAPI.Controllers
         }
 
 
+        [Route("UpdateCatalog")]
         [HttpPut]
         public async Task<IActionResult> UpdateCatalogAsync(PutCatalogRequest catalogRequest)
         {
@@ -108,7 +113,7 @@ namespace AWSS3BucketWithNetCore.WebAPI.Controllers
 
                 var response = await _catalogService.UpdateCatalogAsync(catalogRequest);
                 await _catalogService.WriteLog("success UpdateCatalogAsync method");
-                
+
                 return Ok(response);
             }
             catch (Exception ex)
@@ -118,7 +123,9 @@ namespace AWSS3BucketWithNetCore.WebAPI.Controllers
             }
         }
 
-        [HttpDelete("{id:int}")]
+
+        [Route("DeleteCatalog/{id}")]
+        [HttpGet]
         public async Task<IActionResult> DeleteCatalogAsync(int id)
         {
             try
@@ -135,8 +142,5 @@ namespace AWSS3BucketWithNetCore.WebAPI.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.ToString());
             }
         }
-
-
-       
     }
 }

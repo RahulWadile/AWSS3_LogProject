@@ -26,7 +26,6 @@
         },
         "frameworks": {
           "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
             "projectReferences": {
               "H:\\DockerAWS\\ProjectTask\\AWS_S3Bucket_With_ASPNetCore\\AWSS3BucketWithNetCore.Domain\\AWSS3BucketWithNetCore.Domain.csproj": {
                 "projectPath": "H:\\DockerAWS\\ProjectTask\\AWS_S3Bucket_With_ASPNetCore\\AWSS3BucketWithNetCore.Domain\\AWSS3BucketWithNetCore.Domain.csproj"
@@ -35,6 +34,7 @@
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
           ]
@@ -42,7 +42,6 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "imports": [
             "net461",
             "net462",
@@ -58,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -84,11 +83,11 @@
         },
         "frameworks": {
           "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
           ]
@@ -96,7 +95,6 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "imports": [
             "net461",
             "net462",
@@ -112,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -138,7 +136,6 @@
         },
         "frameworks": {
           "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
             "projectReferences": {
               "H:\\DockerAWS\\ProjectTask\\AWS_S3Bucket_With_ASPNetCore\\AWSS3BucketWithNetCore.Domain\\AWSS3BucketWithNetCore.Domain.csproj": {
                 "projectPath": "H:\\DockerAWS\\ProjectTask\\AWS_S3Bucket_With_ASPNetCore\\AWSS3BucketWithNetCore.Domain\\AWSS3BucketWithNetCore.Domain.csproj"
@@ -147,6 +144,7 @@
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
           ]
@@ -154,7 +152,6 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "dependencies": {
             "AWSSDK.S3": {
               "target": "Package",
@@ -184,7 +181,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -210,7 +207,6 @@
         },
         "frameworks": {
           "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
             "projectReferences": {
               "H:\\DockerAWS\\ProjectTask\\AWS_S3Bucket_With_ASPNetCore\\AWSS3BucketWithNetCore.Domain.Services\\AWSS3BucketWithNetCore.Domain.Services.csproj": {
                 "projectPath": "H:\\DockerAWS\\ProjectTask\\AWS_S3Bucket_With_ASPNetCore\\AWSS3BucketWithNetCore.Domain.Services\\AWSS3BucketWithNetCore.Domain.Services.csproj"
@@ -222,6 +218,7 @@
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
           ]
@@ -229,7 +226,6 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "dependencies": {
             "Newtonsoft.Json": {
               "target": "Package",
@@ -251,7 +247,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
         }
       }
     }

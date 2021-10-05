@@ -5,6 +5,11 @@
     <UserSecretsId>1770afbd-c64f-48df-af75-7a16a68b0917</UserSecretsId>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
   <ItemGroup>
     <Content Remove="appsettings.Development.json" />
   </ItemGroup>

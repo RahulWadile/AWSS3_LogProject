@@ -579,7 +579,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
             "H:\\DockerAWS\\ProjectTask\\AWS_S3Bucket_With_ASPNetCore\\AWSS3BucketWithNetCore.Infrastructure.Persistence\\AWSS3BucketWithNetCore.Infrastructure.Persistence.csproj": {
               "projectPath": "H:\\DockerAWS\\ProjectTask\\AWS_S3Bucket_With_ASPNetCore\\AWSS3BucketWithNetCore.Infrastructure.Persistence\\AWSS3BucketWithNetCore.Infrastructure.Persistence.csproj"
@@ -588,6 +587,7 @@
         }
       },
       "warningProperties": {
+        "allWarningsAsErrors": true,
         "warnAsError": [
           "NU1605"
         ]
@@ -595,7 +595,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "AWSSDK.Extensions.NETCore.Setup": {
             "target": "Package",
@@ -628,7 +627,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
       }
     }
   }

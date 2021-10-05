@@ -36,6 +36,5 @@ H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.Web
 H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.WebAPI\obj\Debug\netcoreapp3.1\AWSS3BucketWithNetCore.WebAPI.dll
 H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.WebAPI\obj\Debug\netcoreapp3.1\AWSS3BucketWithNetCore.WebAPI.pdb
 H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.WebAPI\obj\Debug\netcoreapp3.1\AWSS3BucketWithNetCore.WebAPI.genruntimeconfig.cache
-H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.WebAPI\obj\Debug\netcoreapp3.1\AWSS3BucketWithNetCore.WebAPI.csproj.AssemblyReference.cache
-H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.WebAPI\obj\Debug\netcoreapp3.1\AWSS3BucketWithNetCore.WebAPI.GeneratedMSBuildEditorConfig.editorconfig
-H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.WebAPI\obj\Debug\netcoreapp3.1\scopedcss\bundle\AWSS3BucketWithNetCore.WebAPI.styles.css
+H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.WebAPI\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+H:\DockerAWS\ProjectTask\AWS_S3Bucket_With_ASPNetCore\AWSS3BucketWithNetCore.WebAPI\obj\Debug\netcoreapp3.1\AWSS3BucketWithNetCore.WebAPI.csprojAssemblyReference.cache

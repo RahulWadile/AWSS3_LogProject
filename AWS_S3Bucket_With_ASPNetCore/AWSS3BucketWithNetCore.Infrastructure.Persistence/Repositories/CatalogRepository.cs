@@ -13,6 +13,7 @@ namespace AWSS3BucketWithNetCore.Infrastructure.Persistence.Repositories
     public class CatalogRepository : ICatalogRepository
     {
         public readonly FilesRepositoryClient _filesRepositoryClient;
+        Catalog catalog = null;
 
         public CatalogRepository(FilesRepositoryClient filesRepositoryClient)
         {
@@ -23,9 +24,9 @@ namespace AWSS3BucketWithNetCore.Infrastructure.Persistence.Repositories
         {
             try
             {
-                int fileName = objCatalog.Id;
-                var jsonString = JsonConvert.SerializeObject(objCatalog);
-                return await _filesRepositoryClient.UploadFileAsync(fileName, jsonString);
+                int fileNameId = objCatalog.Id;
+                var jsonCatlogString = JsonConvert.SerializeObject(objCatalog);
+                return await _filesRepositoryClient.UploadFileAsync(fileNameId, jsonCatlogString);
             }
             catch (Exception)
             {
@@ -36,22 +37,19 @@ namespace AWSS3BucketWithNetCore.Infrastructure.Persistence.Repositories
 
         public async Task<Catalog> GetCatalogByIdAsync(int catalogId)
         {
-            Catalog catalog = null;
             try
             {
                 Stream stream = await _filesRepositoryClient.GetFileAsync(catalogId.ToString() + ".json");
 
                 StreamReader reader = new StreamReader(stream);
-                string text = reader.ReadToEnd();
+                string textCatlog = reader.ReadToEnd();
 
-                catalog = JsonConvert.DeserializeObject<Catalog>(text);
+                catalog = JsonConvert.DeserializeObject<Catalog>(textCatlog);
             }
             catch (Exception)
             {
-
                 throw;
             }
-
             return catalog;
         }
 
@@ -64,7 +62,7 @@ namespace AWSS3BucketWithNetCore.Infrastructure.Persistence.Repositories
 
                 foreach (var fileName in files)
                 {
-                    if (fileName.Contains(".json"))
+                    if (fileName.ToLower().Contains(".json"))
                     {
                         Stream stream = await _filesRepositoryClient.GetFileAsync(fileName);
 
@@ -78,7 +76,6 @@ namespace AWSS3BucketWithNetCore.Infrastructure.Persistence.Repositories
             }
             catch (Exception)
             {
-
                 throw;
             }
 
@@ -95,7 +92,6 @@ namespace AWSS3BucketWithNetCore.Infrastructure.Persistence.Repositories
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -116,16 +112,12 @@ namespace AWSS3BucketWithNetCore.Infrastructure.Persistence.Repositories
         public async Task<bool> WriteLog(string exceptionMsg)
         {
             try
-            {
-                
-                bool flagIsFileExist = false;
-                flagIsFileExist = await _filesRepositoryClient.WriteLog(exceptionMsg);
+            {             
+               return await _filesRepositoryClient.WriteLog(exceptionMsg);
 
-                return flagIsFileExist;
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -133,21 +125,16 @@ namespace AWSS3BucketWithNetCore.Infrastructure.Persistence.Repositories
 
         public async Task<string> GetLogDetails(string fileName)
         {
-            string textAllFiledata = string.Empty;
             try
             {
                 Stream stream = await _filesRepositoryClient.GetFileAsync(fileName);
-
                 StreamReader reader = new StreamReader(stream);
-                 textAllFiledata = reader.ReadToEnd();             
+                return reader.ReadToEnd();
             }
             catch (Exception)
             {
-
                 throw;
-            }
-
-            return textAllFiledata;
+            }            
         }
     }
 }

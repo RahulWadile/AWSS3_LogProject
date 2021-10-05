@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "h8wTQqJg/UamwUDviBdokZcZPVuRGiEFONSnd3X4Iv8uiqJC4w5MLErT7RjwM4ycCaE8V05r7C7SaRnp3U5jqQ==",
+  "dgSpecHash": "5/eXCHJaB2ktuBh/pVwwRSMotJ9MWDvCnlb7jieEwizjR/CckIf8MpLpqzHPv6+0i8lGQUDGdqVZ9zk0KeER2w==",
   "success": true,
   "projectFilePath": "H:\\DockerAWS\\ProjectTask\\AWS_S3Bucket_With_ASPNetCore\\AWSS3BucketWithNetCore.WebAPI\\AWSS3BucketWithNetCore.WebAPI.csproj",
   "expectedPackageFiles": [

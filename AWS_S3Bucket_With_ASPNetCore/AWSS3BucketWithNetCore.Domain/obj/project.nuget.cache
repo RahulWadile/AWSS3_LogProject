@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "C/XMLQzVQx3316KjACFD/wEqoQSlre4lK6st14xUTafQ/lXMC0thGKVq3VLtGORLTqWfGPcaOo5aYNHgBw+BGQ==",
+  "dgSpecHash": "zBY4psOrOX8LMpvqaT8jxgAU+e1JDFWF8u+AzroDvvguL2MdrdkLZZuElwsdOCDOdzlZgsfZk4a9AmH8HrB38Q==",
   "success": true,
   "projectFilePath": "H:\\DockerAWS\\ProjectTask\\AWS_S3Bucket_With_ASPNetCore\\AWSS3BucketWithNetCore.Domain\\AWSS3BucketWithNetCore.Domain.csproj",
   "expectedPackageFiles": [],
